@@ -1,0 +1,184 @@
+/* VARIABLES */
+:root {
+    --bg-dark: #0d1117;
+    --card-bg: #161b22;
+    --milan-red: #e32221;
+    --text-main: #c9d1d9;
+    --border-color: #30363d;
+}
+
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background-color: #000;
+    border-bottom: 2px solid var(--milan-red);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h1 span { color: var(--milan-red); }
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+nav a:hover { color: var(--milan-red); }
+
+/* SECTIONS */
+section { margin: 40px 0; }
+
+h2 {
+    color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+hr { border: 0; border-top: 1px solid var(--border-color); margin: 40px 0; }
+
+/* LISTES (Style de ton image) */
+ul { padding-left: 20px; margin-bottom: 15px; }
+li { margin-bottom: 8px; }
+li::marker { color: white; }
+
+/* TABLEAU */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th { background-color: var(--milan-red); color: white; }
+
+/* GRILLE ÉQUIPE */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.player-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid var(--milan-red);
+}
+
+.pos { color: var(--milan-red); font-size: 0.8rem; font-weight: bold; }
+
+/* FORMULAIRE */
+.contact-form {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; color: white; }
+
+input {
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 4px;
+}
+
+button {
+    background: var(--milan-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* FOOTER */
+footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #8b949e; }
+
+.group-title {
+    color: var(--milan-red);
+    font-size: 1.2rem;
+    margin: 30px 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid var(--milan-red);
+    padding-left: 10px;
+}
+
+/* On ajuste la grille pour qu'elle soit plus compacte avec beaucoup de joueurs */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.hero {
+    /* Image de San Siro en fond */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('https://images.adsttc.com/media/images/68e2/cbad/e5d9/cd01/88b3/0594/newsletter/foster-plus-partners-and-manica-to-design-new-stadium-as-milan-approves-sale-of-san-siro_1.jpg?1759693781');
+    
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: white;
+    border-bottom: none; /* On enlève la bordure pour le titre du stade */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #eee;
+}
