@@ -22,7 +22,7 @@ L'objectif principal était de concevoir une interface moderne et responsive en 
 
 ## 📸 Aperçu
 > [!TIP]
-> Vous pouvez consulter le site en direct ici : [LIEN_VERS_TON_GITHUB_PAGES]
+> Vous pouvez consulter le site en direct ici : https://k92nm.github.io/ap-site-web/
 
 ## 📂 Structure du Projet
 ```text
